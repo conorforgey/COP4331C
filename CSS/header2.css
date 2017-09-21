@@ -1,0 +1,102 @@
+@charset "utf-8";
+/* CSS Document */
+
+header{
+	width: 100%;
+	margin: 0;
+	padding-right: 0;
+}
+.navigationbar{
+	height: 50px;
+	width: 100%;
+	background-color:  #ffcc00;
+	text-align: center;
+	margin-right: 3vw;
+	display: inline-block;
+	
+}
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13vw;width:13vw;padding:0}
+.navigationbar2{
+	height: 60px;
+	width: 100%;
+	background-color:  #ffcc00;
+	display: inline-flex;
+	
+}
+.logo{
+	width: 6vw;
+	margin-top: 1vw;
+}
+.menu{
+	width: 100%;
+	padding-top: 1vw;
+	font-family: "Helvetica";
+
+}
+
+.hometitle{
+	font-weight: 700;
+	color: white;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: "Helvetica";
+}
+@media screen and (max-width: 600px) {
+	.subtitle{
+		visibility: hidden;
+	}
+
+}
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+.subtitleb{
+		color: white;
+		text-transform: uppercase;
+		text-align: center;
+		font-family: 'Helvetica';
+		margin-top: .5em;
+		letter-spacing: .5em;
+}
+.hometitleb{
+	display: inline-block;
+	padding: 0.5em;
+	border: white solid 10px;
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 5%;
+	height:  30vw;
+	width: 65%;
+}
+.menutab{
+	margin-right: 4vw;
+	font-size: 1.6vw;
+}
+.title1{
+	font-family: 'Helvetica';
+	text-align: center;
+
+}
+.myslides{
+	height: 20vw;
+}
+.maintitle{
+	font-weight: 700; 
+	color: black; 
+	text-transform: uppercase; 
+	letter-spacing: .5em;
+	text-align: left; 
+	font-family: 'Helvetica';
+	font-size:5vw;
+	margin-left: 10vw;
+	margin-bottom: 0vw;
+}
+.maintitleb{
+	margin-left: 10vw;
+	margin-top: .5vw;
+	width: 85%;
+}

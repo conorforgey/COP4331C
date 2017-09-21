@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+
+.ISTNEWS{
+	text-align: center; 
+	font-family: 'Helvetica'; 
+}
+.homebody{
+	display: inline-flex; 
+	width: 90%; 
+	margin-top: 2vw; 
+	margin-left: 3vw;
+	 margin-right: 3vw; 
+	 height: 80vw;
+}
+.partnershipside{
+	width: 20%;  
+	background: white; 
+	margin-right: 8vw; 
+	height: 80%; 
+	box-shadow: 10px 10px 5px #888888;
+}
+.ptitle{
+	font-family: 'Helvetica'; 
+	text-align: center;
+}
+.spotlight{
+	width: 98%;  
+	background: white; 
+	margin-right: 2vw; 
+	height: 20%; 
+	box-shadow: 10px 10px 5px #888888;
+}
+.research{
+	width: 98%;  
+	background: white; 
+	margin-top: 2vw; 
+	margin-right: 2vw;
+	 height: 20%; 
+	 box-shadow: 10px 10px 5px #888888;
+}
+.events{
+	width: 98%;  
+	background: white; 
+	margin-top: 2vw;
+	 margin-right: 2vw; 
+	 height: 20%; 
+	 box-shadow: 10px 10px 5px #888888;
+}
