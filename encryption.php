@@ -35,8 +35,9 @@ class Encryptor
     }
     public function encrypt($data)
     {
-        $iv = openssl_random_psuedo_bytes($this->ivBytes()); 
-        $encrypted_string = bin2hex($iv). openssl_encrypt($data, $this->method, $this->key, 0, $iv); 
+        $iv = hash('ripemd160', $data);
+        $encrypted_string = $iv;
+		return $encrypted_string;
     }
     
     public function decrypt($data)
@@ -53,10 +54,9 @@ class Encryptor
         
            }
            }
-           
-        
-?>
-//how to call
+          //how to call
 //$instance = new Encryptor(string you want to use);
 //$cryptedToken = $instance->encrypt($token); 
-//$decryptedToken = $instance->decrypt($cryptedToken)
+//$decryptedToken = $instance->decrypt($cryptedToken) 
+        
+?>
