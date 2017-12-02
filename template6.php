@@ -115,9 +115,20 @@ include('Config.php');?>
             
             <dt>Education</dt>
             <dd>
-                <h2>Withering Madness University - Planet Vhoorl</h2>
-                <p><strong>Major:</strong> Public Relations<br />
-                   <strong>Minor:</strong> Scale Tending</p>
+                
+                 <?php
+                    $username = $_SESSION['login_user'];
+                    $sql = "SELECT * FROM education WHERE username='$username'";
+                    $result = mysqli_query($db,$sql);
+                                    
+                  if (!empty($result)) {
+                    // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                    echo "<h2>".$row["school"]." ,".$row["time"]."</h2>".$row["degree"]."," .$row["major"] . "<br>".$row["minor"]."<br>".$row["distinctions"];
+                    }
+                    } else {
+                        }
+                 ?>
             </dd>
             
             <dd class="clear"></dd>
@@ -153,19 +164,20 @@ include('Config.php');?>
             
             <dt>Experience</dt>
             <dd>
-                <h2>Doomsday Cult <span>Leader/Overlord - Baton Rogue, LA - 1926-2010</span></h2>
-                <ul>
-                    <li>Inspired and won highest peasant death competition among servants</li>
-                    <li>Helped coordinate managers to grow cult following</li>
-                    <li>Provided untimely deaths to all who opposed</li>
-                </ul>
-                
-                <h2>The Watering Hole <span>Bartender/Server - Milwaukee, WI - 2009</span></h2>
-                <ul>
-                    <li>Worked on grass-roots promotional campaigns</li>
-                    <li>Reduced theft and property damage percentages</li>
-                    <li>Janitorial work, Laundry</li>
-                </ul> 
+               <?php
+                $username = $_SESSION['login_user'];
+                $sql = "SELECT * FROM work WHERE username='$username'";
+                $result = mysqli_query($db,$sql);
+                                    
+                if (!empty($result)) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                echo "<h2>".$row["employer"]."</h2><h3>".$row["position"]." &nbsp".$row["start"]."-".$row["end"]."</h3><p>".$row["respo1"]."<br>".$row["respo2"]."<br>".$row["respo3"]."<br>".$row["respo4"];
+                    }
+                } else {
+
+                        }
+              ?>
             </dd>
             
             <dd class="clear"></dd>
